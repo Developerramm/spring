@@ -1,5 +1,6 @@
 package org.spring;
 
+import org.spring.primitive.Student;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -15,13 +16,12 @@ public class App
         System.out.println( "Hello World!" );
         ApplicationContext ap = new ClassPathXmlApplicationContext("Beans.xml");
         System.out.println(ap);
-        Shyam sm = ap.getBean("shyam",Shyam.class);
-        sm.eat();
-        sm.sleep();
 
-        Ram rm = ap.getBean("ram", Ram.class);
-        rm.eat();
-        rm.sleep();
+        Student st1 = ap.getBean("st1", Student.class);
+        Student st2 = ap.getBean("st2", Student.class);
+
+        System.out.println(st1.toString());
+        System.out.println(st2.toString());
 
     }
 }
