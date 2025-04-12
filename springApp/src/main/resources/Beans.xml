@@ -4,20 +4,30 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-    <bean name="st1" class="org.spring.primitive.Student">
-        <property name="id">
-            <value>101</value>
+    <bean name="st1" class="org.spring.collection.Student">
+        <property name="id" value="100" />
+        <property name="name" value="Ram Kumar" />
+        <property name="address">
+            <list>
+                <value>India</value>
+                <value>USA</value>
+            </list>
         </property>
-        <property name="name">
-            <value>Ram Kumar</value>
-        </property>
-        <property name="address" value="India"/>
-    </bean>
 
-    <bean name="st2" class="org.spring.primitive.Student">
-        <property name="id" value="102" />
-        <property name="name" value="Virath kohali" />
-        <property name="address" value="Delhi" />
+        <property name="phone">
+            <set>
+                <value>1234</value>
+                <value>4563</value>
+            </set>
+        </property>
+
+        <property name="course">
+            <map>
+                <entry key="java" value="2 month" />
+                <entry key="html" value="2 month" />
+                <entry key="css" value="2 month" />
+            </map>
+        </property>
     </bean>
 
 </beans>
