@@ -1,6 +1,6 @@
 package org.spring;
 
-import org.spring.collection.Student;
+import org.spring.reference.Student;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -17,8 +17,11 @@ public class App
         ApplicationContext ap = new ClassPathXmlApplicationContext("Beans.xml");
         System.out.println(ap);
 
-        Student st1 = ap.getBean("st1", Student.class);
-        System.out.println(st1.toString());
+        Student student = ap.getBean("student", Student.class);
+        System.out.println(student.toString());
+
+//        Student st1 = ap.getBean("student", Student.class);
+//        System.out.println(st1.toString());
 
 //        Student st1 = ap.getBean("st1", Student.class);
 //        Student st2 = ap.getBean("st2", Student.class);

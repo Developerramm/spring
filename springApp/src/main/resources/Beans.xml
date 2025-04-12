@@ -4,30 +4,50 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-    <bean name="st1" class="org.spring.collection.Student">
+
+    <bean id="student" class="org.spring.reference.Student">
         <property name="id" value="100" />
-        <property name="name" value="Ram Kumar" />
-        <property name="address">
-            <list>
-                <value>India</value>
-                <value>USA</value>
-            </list>
-        </property>
+        <property name="name" value="Ram Kumar"/>
+        <property name="rollNo" value="BA"/>
+        <property name="className" value="B.ed"/>
+       <property name="address" ref="ad" />
 
-        <property name="phone">
-            <set>
-                <value>1234</value>
-                <value>4563</value>
-            </set>
-        </property>
-
-        <property name="course">
-            <map>
-                <entry key="java" value="2 month" />
-                <entry key="html" value="2 month" />
-                <entry key="css" value="2 month" />
-            </map>
-        </property>
     </bean>
+
+    <bean id="ad" class="org.spring.reference.Address">
+        <property name="id" value="01" />
+        <property name="addline" value="Maniyari"/>
+        <property name="city" value="Sitamrhi"/>
+        <property name="state" value="Bihar"/>
+        <property name="country" value="India"/>
+    </bean>
+
+
+
+<!--    <bean name="st1" class="org.spring.collection.Student">-->
+<!--        <property name="id" value="100" />-->
+<!--        <property name="name" value="Ram Kumar" />-->
+<!--        <property name="address">-->
+<!--            <list>-->
+<!--                <value>India</value>-->
+<!--                <value>USA</value>-->
+<!--            </list>-->
+<!--        </property>-->
+
+<!--        <property name="phone">-->
+<!--            <set>-->
+<!--                <value>1234</value>-->
+<!--                <value>4563</value>-->
+<!--            </set>-->
+<!--        </property>-->
+
+<!--        <property name="course">-->
+<!--            <map>-->
+<!--                <entry key="java" value="2 month" />-->
+<!--                <entry key="html" value="2 month" />-->
+<!--                <entry key="css" value="2 month" />-->
+<!--            </map>-->
+<!--        </property>-->
+<!--    </bean>-->
 
 </beans>
