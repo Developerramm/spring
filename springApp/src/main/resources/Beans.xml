@@ -4,23 +4,29 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-
-    <bean id="student" class="org.spring.reference.Student">
-        <property name="id" value="100" />
-        <property name="name" value="Ram Kumar"/>
-        <property name="rollNo" value="BA"/>
-        <property name="className" value="B.ed"/>
-       <property name="address" ref="ad" />
-
+    <bean class="org.spring.ci.Student" id="student">
+        <constructor-arg value="1" type="int" />
+        <constructor-arg value="Ram Kumar" />
     </bean>
 
-    <bean id="ad" class="org.spring.reference.Address">
-        <property name="id" value="01" />
-        <property name="addline" value="Maniyari"/>
-        <property name="city" value="Sitamrhi"/>
-        <property name="state" value="Bihar"/>
-        <property name="country" value="India"/>
-    </bean>
+
+
+<!--    <bean id="student" class="org.spring.reference.Student">-->
+<!--        <property name="id" value="100" />-->
+<!--        <property name="name" value="Ram Kumar"/>-->
+<!--        <property name="rollNo" value="BA"/>-->
+<!--        <property name="className" value="B.ed"/>-->
+<!--       <property name="address" ref="ad" />-->
+
+<!--    </bean>-->
+
+<!--    <bean id="ad" class="org.spring.reference.Address">-->
+<!--        <property name="id" value="01" />-->
+<!--        <property name="addline" value="Maniyari"/>-->
+<!--        <property name="city" value="Sitamrhi"/>-->
+<!--        <property name="state" value="Bihar"/>-->
+<!--        <property name="country" value="India"/>-->
+<!--    </bean>-->
 
 
 
