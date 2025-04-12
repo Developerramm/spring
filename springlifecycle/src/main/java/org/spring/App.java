@@ -1,7 +1,7 @@
 package org.spring;
 
-import org.spring.impl.Student;
-import org.springframework.context.ApplicationContext;
+
+import org.spring.annotation.Student;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -19,6 +19,9 @@ public class App
 
         Student student = ap.getBean("st1",Student.class);
         System.out.println(student.toString());
+
+//        Student student = ap.getBean("st1",Student.class);
+//        System.out.println(student.toString());
         ap.registerShutdownHook();
 //        Student st = ap.getBean("st1", Student.class);
 //        System.out.println(st.toString());
