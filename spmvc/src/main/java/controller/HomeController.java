@@ -13,4 +13,9 @@ public class HomeController {
         m.setViewName("index");
         return m;
     }
+
+    @RequestMapping("/home")
+    public String home(){
+        return "home";
+    }
 }
