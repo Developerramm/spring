@@ -1,6 +1,7 @@
 package controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -15,7 +16,20 @@ public class HomeController {
     }
 
     @RequestMapping("/home")
-    public String home(){
+    public String home(Model m){
+        m.addAttribute("name","Ram Kumar");
         return "home";
     }
+
+    @RequestMapping("/login")
+    public ModelAndView login(){
+
+        ModelAndView m = new ModelAndView();
+        m.addObject("city","Maniyari");
+        m.addObject("key","Chabhi");
+        m.setViewName("login");
+        return m;
+    }
+
+
 }
