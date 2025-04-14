@@ -46,6 +46,15 @@
                     autocomplete="off"
                   />
                 </div>
+                <div class="mb-3">
+                  <label class="form-label">image </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="image"
+                    autocomplete="off"
+                  />
+                </div>
                 <button type="submit" class="btn btn-primary col-md-12">Submit</button>
               </form>
             </div>
