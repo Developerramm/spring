@@ -1,3 +1,4 @@
+<%@page isELIgnored = "false" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,12 +9,17 @@
 <body>
     <h1>This is login page here </h1>
 
-    <%
+    <!-- <%
         String city = (String) request.getAttribute("city");
         String key = (String) request.getAttribute("key");
     %>
 
     <%= city %>
-    <%= key %>
+    <%= key %> -->
+
+    <h3> city ${city} </h3>
+    <h3> key :  ${key} </h3>
+
+
 </body>
 </html>
