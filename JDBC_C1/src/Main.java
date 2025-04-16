@@ -1,5 +1,14 @@
+import java.sql.Connection;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        Connection conn = null;
+        try{
+            conn = DBConnection.getConnection();
+            System.out.println("Connection created successfully");
+        } catch (Exception e) {
+            System.out.println("Connection failed");
+            e.printStackTrace();
+        }
     }
 }
