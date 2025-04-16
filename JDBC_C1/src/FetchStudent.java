@@ -10,7 +10,7 @@ public class FetchStudent {
         String query = "SELECT * FROM spark.students;";
 
         try{
-            Class.forName("com.mysql.cj.jdbc.Driver");
+//            Class.forName("com.mysql.cj.jdbc.Driver");
             Connection conn = DriverManager.getConnection(url,username,password);
             Statement stmt = conn.createStatement();
             ResultSet result = stmt.executeQuery(query);
@@ -28,8 +28,6 @@ public class FetchStudent {
             conn.close();
             System.out.println("Connection created successfully");
         }catch (SQLException e){
-            System.out.println(e.getMessage());
-        }catch (ClassNotFoundException e){
             System.out.println(e.getMessage());
         }
     }
