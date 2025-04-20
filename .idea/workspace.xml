@@ -5,12 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4dde1924-557b-48fb-92c6-40b787337361" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/mvc1/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc1/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc1/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc1/src/main/webapp/WEB-INF/mvc-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc1/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc1/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_jdbc_form/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_jdbc_form/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_jdbc_form/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_jdbc_form/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_jdbc_form/src/main/java/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_jdbc_form/src/main/java/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_jdbc_form/src/main/java/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_jdbc_form/src/main/java/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_jdbc_form/src/main/java/service/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_jdbc_form/src/main/webapp/WEB-INF/jdbc-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_jdbc_form/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_jdbc_form/src/main/webapp/WEB-INF/views/register.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_jdbc_form/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_jdbc_form/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
