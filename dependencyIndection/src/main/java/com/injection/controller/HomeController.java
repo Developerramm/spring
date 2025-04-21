@@ -7,11 +7,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class HomeController {
-    @Autowired
+//    @Autowired
     private UserService userService;
+    public HomeController(UserService userService){
+        this.userService = userService;
+    }
+
+    @RequestMapping("/")
+    public String home(){
+        return "home";
+    }
 
     @RequestMapping("/createUser")
     public String registerUser(){
+       String msg = userService.saveUser();
+        System.out.println(msg);
         return "success";
     }
 
