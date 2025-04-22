@@ -5,6 +5,9 @@ import com.jpa.repository.StudentRepo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
@@ -16,11 +19,26 @@ public class SpringDataJpaApplication {
 		System.out.println("Ram kumar");
 		StudentRepo st = ap.getBean(StudentRepo.class);
 
-		Student s1 = st.findByName("Mahi Kumari");
-		System.out.println(s1);
+		// pagination and sorting
 
-		List<Student> s2 = st.findByAddress("Pakistan");
-		s2.forEach(sm -> System.out.println(sm));
+		Pageable pageable =PageRequest.of(1,5);
+
+		Page<Student> page = st.findAll(pageable);
+		page.get().forEach(e-> System.out.println(e));
+		System.out.println(page.getSize());
+		System.out.println(page.getTotalPages());
+		System.out.println(page.getTotalElements());
+		System.out.println(page.getContent());
+
+		// end pagination and sorting
+
+
+
+//		Student s1 = st.findByName("Mahi Kumari");
+//		System.out.println(s1);
+//
+//		List<Student> s2 = st.findByAddress("Pakistan");
+//		s2.forEach(sm -> System.out.println(sm));
 
 
 //		Student student = new Student();
