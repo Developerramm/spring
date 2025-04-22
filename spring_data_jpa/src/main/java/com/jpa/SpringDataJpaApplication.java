@@ -15,9 +15,17 @@ public class SpringDataJpaApplication {
 	ApplicationContext ap = SpringApplication.run(SpringDataJpaApplication.class, args);
 		System.out.println("Ram kumar");
 		StudentRepo st = ap.getBean(StudentRepo.class);
-		Student student = new Student();
-		student.setName("Sarita Kumar");
-		student.setAddress("India");
+
+		Student s1 = st.findByName("Mahi Kumari");
+		System.out.println(s1);
+
+		List<Student> s2 = st.findByAddress("Pakistan");
+		s2.forEach(sm -> System.out.println(sm));
+
+
+//		Student student = new Student();
+//		student.setName("KL Rahul");
+//		student.setAddress("Nepal");
 //		st.save(student);
 
 //		List<Student> list = (List<Student>) st.findAll();
