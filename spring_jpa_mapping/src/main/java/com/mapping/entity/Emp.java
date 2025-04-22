@@ -2,6 +2,8 @@ package com.mapping.entity;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 public class Emp {
 
@@ -12,6 +14,9 @@ public class Emp {
 
     @OneToOne(mappedBy = "emp",cascade = CascadeType.ALL)
     private Mobile mobile; // this is foreign key
+
+    @OneToMany(mappedBy = "emp",cascade = CascadeType.ALL)
+    private List<Address> address;
 
     public int getId() {
         return id;

@@ -40,13 +40,13 @@ public class SpringJpaMappingApplication implements CommandLineRunner {
 //
 //		System.out.println("Save successfully");
 
-		Emp emp = empRepo.findById(2).get();
-		System.out.println("name = " + emp.getEmpName());
-		System.out.println("Mobile = " + emp.getMobile().getMobileName());
-
-		Mobile mb = mobileRepo.findById(4).get();
-		System.out.println(mb.getEmp().getEmpName());
-		System.out.println(mb.getMobileName());
+//		Emp emp = empRepo.findById(2).get();
+//		System.out.println("name = " + emp.getEmpName());
+//		System.out.println("Mobile = " + emp.getMobile().getMobileName());
+//
+//		Mobile mb = mobileRepo.findById(4).get();
+//		System.out.println(mb.getEmp().getEmpName());
+//		System.out.println(mb.getMobileName());
 
 	}
 }
