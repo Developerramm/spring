@@ -8,6 +8,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 
 import java.util.List;
 
@@ -21,7 +22,8 @@ public class SpringDataJpaApplication {
 
 		// pagination and sorting
 
-		Pageable pageable =PageRequest.of(1,5);
+		Sort sort = Sort.by("name").ascending();
+		Pageable pageable =PageRequest.of(0,5,sort);
 
 		Page<Student> page = st.findAll(pageable);
 		page.get().forEach(e-> System.out.println(e));
